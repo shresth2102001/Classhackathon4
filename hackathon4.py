@@ -2,7 +2,7 @@ import xlrd
 import os
 import matplotlib.pyplot as plt
 def retrivingyearlydata(crop_year,crop,production):
-    n=input("Enter the year for which you need cropwise productivity details :")
+    n=int(input("Enter the year for which you need cropwise productivity details :"))
     for i in range(len(crop_year)):
         if(crop_year[i]==n):
             print(str(crop[i])+" : "+str(production[i]))
@@ -37,7 +37,7 @@ area=sheet.col_values(5)
 production=sheet.col_values(6)
 print("Enter 1 for retrivingyearlydata , 2 for cropwisegraph , 3 for crop wise retriveal 4 for exit")
 while(1):
-    cl=input("Enter the comand line:")
+    cl=int(input("Enter the comand line:"))
     if(cl==1):
         retrivingyearlydata(crop_year,crop,production)
     elif(cl==2):
