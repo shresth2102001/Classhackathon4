@@ -20,7 +20,7 @@ def cropwisegraph(crop_year,crop,production):
     plt.title('year vs crop productivity graph') 
     plt.show() 
 def cropwisedataretive(crop_year,crop,production,area,season,state,district):
-     n=input("Enter the crop for rest of data")
+     n=input("Enter the crop name for retriving data")
      for i in range(len(crop_year)):
         if(crop_year[i]==n):
             print("\n crop : "+str(crop[i])+"\n production : "+str(production[i])+" \n crop year: " +str(crop_year[i])+"\n season:" +str(season[i])+"\n state:" + str(state[i])+ "\n district:"+ str(district[i]))
@@ -35,8 +35,8 @@ season=sheet.col_values(3)
 crop=sheet.col_values(4)
 area=sheet.col_values(5)
 production=sheet.col_values(6)
-print("Enter 1 for retrivingyearlydata , 2 for cropwisegraph , 3 for crop wise retriveal 4 for exit")
 while(1):
+    print("Enter: \n 1: retrivingyearlydata \n 2 : cropwisegraph \n 3 : crop wise retriveal \n 4 : exit")
     cl=int(input("Enter the comand line:"))
     if(cl==1):
         retrivingyearlydata(crop_year,crop,production)
